@@ -110,10 +110,10 @@ A deep dive into the fragment lifecycle could be a lesson in itself. Here, we’
 Similar to the Activity’s onCreate callback. This is when the fragment is created. This will only get called once. Here you should:
 
 1- Initialize anything essential for your fragment.
-2- ***DO NOT inflate XML***, do that in onCreateView, when the system is first drawing the fragment NOT reference the activity, it is still being created. Do this in```bash onViewCreated().```
+2- ***DO NOT inflate XML***, do that in onCreateView, when the system is first drawing the fragment NOT reference the activity, it is still being created. Do this in```onViewCreated()```.
 
 ### **onCreateView**: 
-This is called between ```bash onCreate()``` and ```bash onViewCreated()```. when the system will draw the fragment for the first time when the fragment becomes visible again. You must return a view in this callback if your fragment has a UI. Here you should:
+This is called between ```onCreate()``` and ```onViewCreated()```. when the system will draw the fragment for the first time when the fragment becomes visible again. You must return a view in this callback if your fragment has a UI. Here you should:
 
 1- Create your views by inflating your XML.
 
@@ -157,8 +157,8 @@ What you’ve seen up to this point are the Activity Lifecycle and the Fragment 
 3- [The Android Lifecycle cheat sheet_part III: Fragments](https://medium.com/androiddevelopers/the-android-lifecycle-cheat-sheet-part-iii-fragments-afc87d4f37fd) - This show the order of lifecycle calls when an activity and fragment interact.
 
 
-## Note: Deprecated Method **```bash onActivityCreated()```**
+## Note: Deprecated Method **```onActivityCreated()```**
 
-The [onActivityCreated()](https://developer.android.com/reference/androidx/fragment/app/Fragment#onActivityCreated(android.os.Bundle)) method from the Fragment class is now deprecated. Instead, use [onViewCreated()](https://developer.android.com/reference/androidx/fragment/app/Fragment#onViewCreated(android.view.View,%20android.os.Bundle)) method for code touching the Fragment's view and ```bash onCreate(Bundle)``` for other initialization. The syntax of ```bash onViewCreated()``` method is:
+The [onActivityCreated()](https://developer.android.com/reference/androidx/fragment/app/Fragment#onActivityCreated(android.os.Bundle)) method from the Fragment class is now deprecated. Instead, use [onViewCreated()](https://developer.android.com/reference/androidx/fragment/app/Fragment#onViewCreated(android.view.View,%20android.os.Bundle)) method for code touching the Fragment's view and ```onCreate(Bundle)``` for other initialization. The syntax of ```onViewCreated()``` method is:
 
-```bash public void onViewCreated (View view, Bundle savedInstanceState)```
+```public void onViewCreated (View view, Bundle savedInstanceState)```
