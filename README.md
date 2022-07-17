@@ -18,7 +18,7 @@ This app is for exploring the [Activity Lifecycle callback methods](https://deve
 You've learned a lot of new terms and received advice on how to use Activity Lifecycle states. 
 At this point, it's important to understand the callback methods of the Activity Lifecycle and Fragment Lifecycle.
 
-##Activity Lifecycle
+##Activity Lifecycle:
 
 
 The Activity class and any of its subclasses can implement a set of (lifecycle callback) methods to change behavior, or run some code when the activity lifecycle state changes. These methods can be overridden in your own activities to perform custom tasks.
