@@ -20,6 +20,7 @@ At this point, it's important to understand the callback methods of the Activity
 
 ##Activity Lifecycle
 
+
 The Activity class and any of its subclasses can implement a set of (lifecycle callback) methods to change behavior, or run some code when the activity lifecycle state changes. These methods can be overridden in your own activities to perform custom tasks.
 
 The diagram below shows the lifecycle states and callback methods of the Activity lifecycle.
